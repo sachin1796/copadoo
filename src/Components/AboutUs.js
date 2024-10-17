@@ -10,7 +10,7 @@ import Footer from './HomePage/Footer';
 const AboutUs = () => (
   <>
   <NavBar />
-  <section className='py-16'>
+  <section className='pt-16 pb-1'>
     <CompanyInfo />
     <FoundersSection />
     <TeamSection />

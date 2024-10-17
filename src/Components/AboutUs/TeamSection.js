@@ -6,13 +6,19 @@ const teamMembers = [
     name: 'Emily Clark',
     title: 'Product Manager',
     description: 'Emily ensures our product meets the highest standards.',
-    image: '/images/emily-clark.jpg',
+    image: 'https://rukminim2.flixcart.com/image/850/1000/l12h1u80/poster/k/q/z/small-baby-groot-multicolour-photo-paper-print-poster-original-imagcqfvhth6j9nt.jpeg?q=90&crop=false',
   },
   {
     name: 'Michael Adams',
     title: 'Lead Developer',
     description: 'Michael leads the technical team to deliver scalable solutions.',
-    image: '/images/michael-adams.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/en/c/ce/Rocket_in_Avengers_Endgame.jpeg',
+  },
+  {
+    name: 'Drax Adams',
+    title: 'Lead Developer',
+    description: 'Michael leads the technical team to deliver scalable solutions.',
+    image: 'https://cdn.marvel.com/content/1x/025drx_ons_inl_03_3.jpg',
   },
   // Add more team members
 ];

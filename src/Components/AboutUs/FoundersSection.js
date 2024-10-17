@@ -6,13 +6,13 @@ const founders = [
     name: 'John Doe',
     title: 'Co-Founder & CEO',
     description: 'John drives the vision and strategy at Edera, shaping the future of EdTech.',
-    image: '/images/john-doe.jpg', // Path to founder images
+    image: 'https://cdn.britannica.com/49/182849-050-4C7FE34F/scene-Iron-Man.jpg', // Path to founder images
   },
   {
     name: 'Jane Smith',
     title: 'Co-Founder & CTO',
     description: 'Jane leads the technical innovation, ensuring Edera remains at the forefront of educational technology.',
-    image: '/images/jane-smith.jpg',
+    image: 'https://www.cnet.com/a/img/resize/8d159fb0c99a75843d3585dd2ae8cc9e6fa12773/hub/2017/08/03/75c3b0ae-5a2d-4d75-b72b-055247b4378f/marvelinfinitywar-captainamerica.jpg?auto=webp&fit=crop&height=1200&width=1200',
   },
 ];
 
