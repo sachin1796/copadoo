@@ -8,9 +8,10 @@ const NavBar = () => {
       <div className="container mx-auto flex justify-between p-4 items-center">
         <h1 className="text-2xl font-bold text-blue-600">Copado Clone</h1>
         <div className="hidden md:flex space-x-8">
-          <a href="#features" className="hover:text-blue-600">Features</a>
-          <a href="#pricing" className="hover:text-blue-600">Pricing</a>
-          <a href="#blog" className="hover:text-blue-600">Blog</a>
+          <a href="/" className="hover:text-blue-600">Home</a>
+          <a href="/solutions" className="hover:text-blue-600">Solutions</a>
+          <a href="/about-us" className="hover:text-blue-600">About Us</a>
+          {/* <a href="#blog" className="hover:text-blue-600">Blog</a> */}
         </div>
         <div className="md:hidden">
           <button onClick={() => setIsOpen(!isOpen)} className="text-blue-600">

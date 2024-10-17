@@ -1,7 +1,11 @@
 import React from "react";
+import NavBar from "./HomePage/NavBar";
+import Footer from "./HomePage/Footer";
 
 const Solutions = () => {
   return (
+    <>
+    <NavBar />
     <section className="bg-gray-100 py-16" id="solutions">
       <div className="container mx-auto text-center">
         <h3 className="text-3xl font-bold mb-10">Solutions</h3>
@@ -123,6 +127,8 @@ const Solutions = () => {
         </div>
       </div>
     </section>
+    <Footer />
+    </>
   );
 };
 
