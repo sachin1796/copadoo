@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+// import { Link } from 'react-router-dom';
 import { Search, ChevronRight, Settings, Code, TestTube, Rocket, Activity, Calendar, FileText, BookOpen, Users, Briefcase } from 'lucide-react';import {Link} from 'react-router-dom';
 
 const NavBar = () => {
@@ -156,6 +157,8 @@ const NavBar = () => {
     }
   ];
 
+
+
   return (
     <nav className="flex items-center justify-between px-8 py-4 relative font-bold">
       <div className="flex items-center space-x-8">
@@ -248,7 +251,7 @@ const NavBar = () => {
             
             {activeDropdown === 'resources' && (
               <div 
-                className="absolute left-0 top-full pt-2 z-50"
+                className="absolute -left-20 top-full pt-2 z-50"
                 onMouseLeave={() => setActiveDropdown(null)}
               >
                 <div className="w-[800px] bg-white rounded-lg shadow-lg grid grid-cols-2 gap-2 p-4">
@@ -278,14 +281,16 @@ const NavBar = () => {
       
       <div className="flex items-center space-x-4">
         <div className="hidden lg:flex space-x-4 items-center">
-          <button className="text-sm hover:text-cyan-400">Community Login</button>
+          {/* <button className="text-sm hover:text-cyan-400">Community Login</button> */}
           <button className="text-sm hover:text-cyan-400">DevOps Exchange</button>
           <button className="text-sm hover:text-cyan-400">Partners</button>
         </div>
         <Search className="w-5 h-5" />
+        <Link to="/consult-us">
         <button className="bg-[#2D3142] text-white px-4 py-2 rounded-md hover:bg-[#3D4152] transition-colors">
-          Book a Consultant
+          Book Consultation
         </button>
+        </Link>
       </div>
     </nav>
   );

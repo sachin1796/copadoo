@@ -1,6 +1,6 @@
 import React from 'react';
 import { Search, ChevronRight } from 'lucide-react';
-import {Link} from "react-router-dom"
+// import {Link} from "react-router-dom"
 import NavBar from './HomePage/NavBar';
 
 export default function LandingPage() {
@@ -56,18 +56,19 @@ export default function LandingPage() {
                   <div className="w-12 h-12 rounded-full bg-purple-500 flex items-center justify-center">
                     <span className="text-xs">PLAN</span>
                   </div>
+
                 </div>
                 <div className="absolute top-1/4 right-1/4 transform translate-x-1/2 -translate-y-1/2">
                   <div className="w-12 h-12 rounded-full bg-cyan-500 flex items-center justify-center">
                     <span className="text-xs">BUILD</span>
                   </div>
                 </div>
-                <div className="absolute bottom-1/4 right-1/4 transform translate-x-1/2 translate-y-1/2">
+                <div className="absolute bottom-1/4 right-1/4 transform -translate-x-1/2 -translate-y-1/2">
                   <div className="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center">
                     <span className="text-xs">TEST</span>
                   </div>
                 </div>
-                <div className="absolute bottom-1/4 left-1/4 transform -translate-x-1/2 translate-y-1/2">
+                <div className="absolute bottom-1/4 left-1/4 transform translate-x-1/2 -translate-y-1/2">
                   <div className="w-12 h-12 rounded-full bg-indigo-500 flex items-center justify-center">
                     <span className="text-xs">DEPLOY</span>
                   </div>
