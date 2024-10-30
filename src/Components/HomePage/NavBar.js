@@ -1,9 +1,157 @@
 import React, { useState } from 'react';
-// import { Link } from 'react-router-dom';
-import { Search, ChevronRight, Settings, Code, TestTube, Rocket, Activity, Calendar, FileText, BookOpen, Users, Briefcase } from 'lucide-react';import {Link} from 'react-router-dom';
+import { Search, ChevronRight, Settings, Code, TestTube, Rocket, Activity, Calendar, FileText, BookOpen, Users, Briefcase } from 'lucide-react';
+import {Link} from 'react-router-dom';
 
 const NavBar = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
+
+  const aboutItems = [
+    {
+      icon: <BookOpen className="w-4 h-4" />,
+      title: "About Copado",
+      description: "Learn how Copado got started and meet our people.",
+      href: "/about-us"
+    },
+    {
+      icon: <Users className="w-4 h-4" />,
+      title: "Customer Stories",
+      description: "Tales of DevOps transformation from around the world.",
+      href: "/customer-stories"
+    },
+    {
+      icon: <Briefcase className="w-4 h-4" />,
+      title: "Partners",
+      description: "Let's team up to deliver more value for joint customers.",
+      href: "/partners"
+    },
+    {
+      icon: <Settings className="w-4 h-4" />,
+      title: "Professional Services",
+      description: "DevOps experts to accelerate time to value.",
+      href: "/professional-services"
+    },
+    {
+      icon: <Code className="w-4 h-4" />,
+      title: "Integrations",
+      description: "Optimize your DevOps ecosystem with flexible, pre-built integrations.",
+      href: "/integrations"
+    },
+    {
+      icon: <TestTube className="w-4 h-4" />,
+      title: "Security Center",
+      description: "Enterprise-grade protection for every cloud environment.",
+      href: "/security"
+    },
+    {
+      icon: <Activity className="w-4 h-4" />,
+      title: "ROI Calculator",
+      description: "How could Copado help your team? Crunch the numbers!",
+      href: "/roi-calculator"
+    },
+    {
+      icon: <Rocket className="w-4 h-4" />,
+      title: "Applications",
+      description: "AI-Powered Devops for Seamless Automation",
+      href: "/applications",
+      badge: "New"
+    }
+  ];
+
+  const productItems = [
+    {
+      title: 'Copado DevOps',
+      items: [
+        {
+          icon: <Settings className="w-4 h-4" />,
+          title: "DevOps Overview",
+          description: "Power & Protect Development with DevOps.",
+          href: "/devops-overview"
+        },
+        {
+          icon: <Code className="w-4 h-4" />,
+          title: "CI/CD",
+          description: "Unlock Continuous Innovation with CI/CD Pipelines.",
+          href: "/ci-cd"
+        },
+        {
+          icon: <Activity className="w-4 h-4" />,
+          title: "Agile Planning",
+          description: "Drive maximum value with agile planning.",
+          href: "/agile-planning"
+        },
+        {
+          icon: <TestTube className="w-4 h-4" />,
+          title: "Quality Assurance",
+          description: "Transform QA with automated testing and quality gates.",
+          href: "/quality-assurance"
+        },
+        {
+          icon: <Code className="w-4 h-4" />,
+          title: "Extensibility",
+          description: "Extend the Copado Platform by executing Functions.",
+          href: "/extensibility"
+        }
+      ]
+    },
+    {
+      title: 'Copado Robotic Testing',
+      items: [
+        {
+          icon: <Rocket className="w-4 h-4" />,
+          title: "Robotic Testing Overview",
+          description: "Automated testing for your applications.",
+          href: "/robotic-testing"
+        },
+        {
+          icon: <Code className="w-4 h-4" />,
+          title: "Salesforce Testing",
+          description: "Specialized testing for Salesforce applications.",
+          href: "/salesforce-testing"
+        },
+        {
+          icon: <Settings className="w-4 h-4" />,
+          title: "Mobile Testing",
+          description: "Comprehensive testing for mobile applications.",
+          href: "/mobile-testing"
+        },
+        {
+          icon: <Activity className="w-4 h-4" />,
+          title: "Copado Explorer",
+          description: "Explore and analyze your testing results.",
+          href: "/copado-explorer"
+        },
+        {
+          icon: <TestTube className="w-4 h-4" />,
+          title: "TestAgent",
+          description: "Automated test execution agent.",
+          href: "/test-agent"
+        }
+      ]
+    },
+    {
+      title: 'Copado AI',
+      items: [
+        {
+          icon: <Rocket className="w-4 h-4" />,
+          title: "Copado AI",
+          description: "Salesforce DevOps Made Easy with AI-Powered Automation",
+          href: "/copado-ai",
+          badge: "New"
+        }
+      ]
+    },
+    {
+      title: 'Copado Essentials',
+      items: [
+        {
+          icon: <Settings className="w-4 h-4" />,
+          title: "Essentials Overview",
+          description: "Streamline deployments with fast and easy DevOps.",
+          href: "/essentials"
+        }
+      ]
+    }
+  ];
 
 
   const resourceItems = [
@@ -172,18 +320,63 @@ const NavBar = () => {
           </div>
         </div>
         <div className="hidden lg:flex space-x-6">
-          <div className="group relative">
-            <button className="hover:text-cyan-400 flex items-center">
+<div className="group relative">
+            <button 
+              className="hover:text-cyan-400 flex items-center"
+              onMouseEnter={() => setActiveDropdown('products')}
+              onClick={() => setActiveDropdown(activeDropdown === 'products' ? null : 'products')}
+            >
               Products <ChevronRight className="w-4 h-4 ml-1 rotate-90" />
             </button>
+            
+            {activeDropdown === 'products' && (
+              <div 
+                className="absolute -left-20 top-full pt-2 z-50"
+                onMouseLeave={() => setActiveDropdown(null)}
+              >
+                <div className="w-[800px] bg-white rounded-lg shadow-lg p-4">
+                  <div className="grid grid-cols-2 gap-6">
+                    {productItems.map((section) => (
+                      <div key={section.title} className="space-y-4">
+                        <h3 className="text-sm font-medium text-gray-900">{section.title}</h3>
+                        <div className="space-y-2">
+                          {section.items.map((item) => (
+                            <a
+                              key={item.title}
+                              href={item.href}
+                              className="block p-3 hover:bg-gray-50 rounded-lg"
+                            >
+                              <div className="flex items-start gap-3">
+                                <div className="text-gray-600 mt-1">{item.icon}</div>
+                                <div>
+                                  <div className="flex items-center gap-2">
+                                    <h4 className="text-sm font-medium text-gray-900">{item.title}</h4>
+                                    {item.badge && (
+                                      <span className="px-2 py-1 text-xs font-medium text-white bg-cyan-400 rounded-full">
+                                        {item.badge}
+                                      </span>
+                                    )}
+                                  </div>
+                                  <p className="text-sm text-gray-500">{item.description}</p>
+                                </div>
+                              </div>
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
+
           <div className="group relative">
             <button 
               className="hover:text-cyan-400 flex items-center"
               onMouseEnter={() => setActiveDropdown('solutions')}
               onClick={() => setActiveDropdown(activeDropdown === 'solutions' ? null : 'solutions')}
             >
-              {/* <span className="cursor-pointer">Solutions</span>  */}
               <Link to={'/solution'}>Solutions</Link>
               <ChevronRight className="w-4 h-4 ml-1 rotate-90" />
             </button>
@@ -226,18 +419,52 @@ const NavBar = () => {
               </div>
             )}
           </div>
-          <div className="group relative">
-            <button className="hover:text-cyan-400 flex items-center">
-              {/* <span className="cursor-pointer">About Us</span> */}
-              <Link to={'/about-us'}>About</Link>
-              <ChevronRight className="w-4 h-4 ml-1 rotate-90" />
+         
+
+<div className="group relative">
+            <button 
+              className="hover:text-cyan-400 flex items-center"
+              onMouseEnter={() => setActiveDropdown('about')}
+              onClick={() => setActiveDropdown(activeDropdown === 'about' ? null : 'about')}
+            >
+              <Link to={'/about-us'}>About</Link> <ChevronRight className="w-4 h-4 ml-1 rotate-90" />
             </button>
+            
+            {activeDropdown === 'about' && (
+              <div 
+                className="absolute -left-20 top-full pt-2 z-50"
+                onMouseLeave={() => setActiveDropdown(null)}
+              >
+                <div className="w-[800px] bg-white rounded-lg shadow-lg p-4">
+                  <div className="grid grid-cols-2 gap-4">
+                    {aboutItems.map((item) => (
+                      <a
+                        key={item.title}
+                        href={item.href}
+                        className="block p-3 hover:bg-gray-50 rounded-lg"
+                      >
+                        <div className="flex items-start gap-3">
+                          <div className="text-gray-600 mt-1">{item.icon}</div>
+                          <div>
+                            <div className="flex items-center gap-2">
+                              <h4 className="text-sm font-medium text-gray-900">{item.title}</h4>
+                              {item.badge && (
+                                <span className="px-2 py-1 text-xs font-medium text-white bg-cyan-400 rounded-full">
+                                  {item.badge}
+                                </span>
+                              )}
+                            </div>
+                            <p className="text-sm text-gray-500">{item.description}</p>
+                          </div>
+                        </div>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
-          {/* <div className="group relative">
-            <button className="hover:text-cyan-400 flex items-center">
-              Resources <ChevronRight className="w-4 h-4 ml-1 rotate-90" />
-            </button>
-          </div> */}
+          
 
 
 <div className="group relative">
@@ -275,7 +502,6 @@ const NavBar = () => {
               </div>
             )}
           </div>
-          {/* <button className="hover:text-cyan-400">Pricing</button> */}
         </div>
       </div>
       
