@@ -6,10 +6,12 @@ import Solutions from './Components/Solutions';
 import LandingPage from './Components/LandingPage';
 import Solution from './Components/Solution';
 import ConsultUs from './Components/Consult/ConsultUs';
+import WhatsAppFloat from './Components/WhatsAppFloat';
 
 const App = () => {
   return (
     <Router>
+      <WhatsAppFloat />
       <Routes>
         {/* Define routes using the 'element' prop */}
         {/* <Route path="/" element={<HomePage />} /> */}
