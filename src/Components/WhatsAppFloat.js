@@ -6,7 +6,7 @@ const WhatsAppFloat = () => {
 
   const handleWhatsAppClick = () => {
     // Replace this with your actual WhatsApp number
-    const phoneNumber = '1234567890';
+    const phoneNumber = '9096451662';
     const message = 'Hi! I would like to learn more about Copado.';
     window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
 
