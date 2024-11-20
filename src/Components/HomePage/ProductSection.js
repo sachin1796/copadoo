@@ -1,11 +1,12 @@
 import React from 'react';
+import image from '../../assets/image.jpg';  
 
 const ProductCard = ({ title, backgroundImage, description }) => (
   <div className="relative overflow-hidden rounded-2xl aspect-square group w-full sm:w-72 md:w-80 lg:w-96 mx-4 flex flex-col justify-between">
     <div 
       className="absolute inset-0 bg-cover bg-center"
       style={{ 
-        backgroundImage: `url(${backgroundImage})`,
+        backgroundImage: `url(${backgroundImage})`, 
         backgroundColor: '#000',
       }}
     />
@@ -30,22 +31,22 @@ const ProductSection = () => {
       <div className="flex flex-wrap justify-center gap-8 lg:justify-start lg:flex-nowrap">
         <ProductCard 
           title="CI-CD"
-          backgroundImage="/assets/image.jpg"
+          backgroundImage={image}  
           description="Continuous Integration and Continuous Deployment for faster delivery."
         />
         <ProductCard 
           title="Robotic Testing"
-          backgroundImage="/assets/image.jpg"
+          backgroundImage={image}  
           description="Automated testing using robotic frameworks to ensure high quality."
         />
         <ProductCard 
           title="AI Agents"
-          backgroundImage="/assets/image.jpg"
+          backgroundImage={image}  
           description="AI-powered agents for intelligent decision-making and automation."
         />
         <ProductCard 
           title="AI Agents"
-          backgroundImage="/assets/image.jpg"
+          backgroundImage={image} 
           description="AI-powered agents for intelligent decision-making and automation."
         />
       </div>

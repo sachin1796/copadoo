@@ -1,5 +1,6 @@
 import React from 'react';
 import { Wind, Wrench, CheckCircle, Rocket, Filter } from 'lucide-react';
+import workflow from '../../assets/workflow.avif';  // Import the image properly
 
 const workflowSteps = [
   {
@@ -93,9 +94,11 @@ function WorkflowBox({
 
 function Workflow() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 p-8 
-      flex items-center justify-center bg-[url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')]
-      bg-cover bg-fixed bg-center overflow-x-hidden">
+    <div 
+      className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 p-8 
+      flex items-center justify-center bg-cover bg-fixed bg-center overflow-x-hidden"
+      style={{ backgroundImage: `url(${workflow})` }}  // Correct way to reference the imported image
+    >
       <div className="max-w-7xl w-full backdrop-blur-sm bg-white/30 rounded-3xl p-12 shadow-xl">
         <div className="flex flex-wrap items-center justify-start gap-8 md:flex-row lg:flex-nowrap">
           {workflowSteps.map((step, index) => (

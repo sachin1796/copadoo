@@ -7,6 +7,7 @@ import LandingPage from './Components/LandingPage';
 import Solution from './Components/Solution';
 import ConsultUs from './Components/Consult/ConsultUs';
 import WhatsAppFloat from './Components/WhatsAppFloat';
+import Footer from './Components/HomePage/Footer';
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <Route path='/solution' element={<Solution/>}/>
         <Route path='/consult-us' element={<ConsultUs />} />
       </Routes>
+      <Footer />
     </Router>
   );
 };

@@ -6,25 +6,6 @@ import image from '../../src/i.jpg';
 import Workflow from './HomePage/Workflow';
 import ProductCard from './HomePage/ProductSection';
 
-// const StageIcon = ({ icon, label, isLast }) => (
-//   <div className="relative">
-//     <div className="aspect-square bg-white bg-opacity-5 rounded-2xl p-6 flex flex-col items-center justify-center border-2 border-white border-opacity-10 hover:border-opacity-20 transition-all group">
-//       <div className="absolute top-4 right-4">
-//         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-//           <path d="M4 4L8 8M8 4L4 8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-//         </svg>
-//       </div>
-//       <div className="text-3xl mb-4">{icon}</div>
-//       <div className="text-lg font-semibold">{label}</div>
-//       {!isLast && (
-//         <div className="absolute top-1/2 -right-6 transform -translate-y-1/2">
-//           <div className="w-8 h-0.5 bg-gradient-to-r from-cyan-500 to-blue-500"></div>
-//         </div>
-//       )}
-//     </div>
-//   </div>
-// );
-
 const MetricCard = ({ value, label, isDark = false }) => (
   <div className={`rounded-xl h-72 flex flex-col justify-center items-center p-6 ${isDark ? 'bg-black' : 'bg-white'}`}>
     <div className={`text-8xl font-bold mb-2 ${isDark ? 'text-cyan-400' : 'text-black'}`}>{value}</div>
@@ -217,12 +198,6 @@ export default function LandingPage() {
               Contact with us
             </a>
           </div>
-        </div>
-      </div>
-
-      <div className="border-t border-gray-800">
-        <div className="container mx-auto px-8 py-8">
-          <p className="text-center text-lg font-bold text-gray-300">TRUSTED BY 1200+ COMPANIES</p>
         </div>
       </div>
 

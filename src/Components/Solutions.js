@@ -1,6 +1,6 @@
 import React from "react";
 import NavBar from "./HomePage/NavBar";
-import Footer from "./HomePage/Footer";
+// import Footer from "./HomePage/Footer";
 
 const Solutions = () => {
   return (
@@ -127,7 +127,7 @@ const Solutions = () => {
         </div>
       </div>
     </section>
-    <Footer />
+    {/* <Footer /> */}
     </>
   );
 };
