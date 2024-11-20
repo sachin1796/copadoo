@@ -1,27 +1,29 @@
 import React from 'react';
-import { Search, ChevronRight } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
 import { Link } from "react-router-dom";
 import NavBar from './HomePage/NavBar';
 import image from '../../src/i.jpg';
+import Workflow from './HomePage/Workflow';
+import ProductCard from './HomePage/ProductSection';
 
-const StageIcon = ({ icon, label, isLast }) => (
-  <div className="relative">
-    <div className="aspect-square bg-white bg-opacity-5 rounded-2xl p-6 flex flex-col items-center justify-center border-2 border-white border-opacity-10 hover:border-opacity-20 transition-all group">
-      <div className="absolute top-4 right-4">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M4 4L8 8M8 4L4 8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-        </svg>
-      </div>
-      <div className="text-3xl mb-4">{icon}</div>
-      <div className="text-lg font-semibold">{label}</div>
-      {!isLast && (
-        <div className="absolute top-1/2 -right-6 transform -translate-y-1/2">
-          <div className="w-8 h-0.5 bg-gradient-to-r from-cyan-500 to-blue-500"></div>
-        </div>
-      )}
-    </div>
-  </div>
-);
+// const StageIcon = ({ icon, label, isLast }) => (
+//   <div className="relative">
+//     <div className="aspect-square bg-white bg-opacity-5 rounded-2xl p-6 flex flex-col items-center justify-center border-2 border-white border-opacity-10 hover:border-opacity-20 transition-all group">
+//       <div className="absolute top-4 right-4">
+//         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+//           <path d="M4 4L8 8M8 4L4 8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+//         </svg>
+//       </div>
+//       <div className="text-3xl mb-4">{icon}</div>
+//       <div className="text-lg font-semibold">{label}</div>
+//       {!isLast && (
+//         <div className="absolute top-1/2 -right-6 transform -translate-y-1/2">
+//           <div className="w-8 h-0.5 bg-gradient-to-r from-cyan-500 to-blue-500"></div>
+//         </div>
+//       )}
+//     </div>
+//   </div>
+// );
 
 const MetricCard = ({ value, label, isDark = false }) => (
   <div className={`rounded-xl h-72 flex flex-col justify-center items-center p-6 ${isDark ? 'bg-black' : 'bg-white'}`}>
@@ -30,39 +32,9 @@ const MetricCard = ({ value, label, isDark = false }) => (
   </div>
 );
 
-const ProductCard = ({ title, backgroundImage, description }) => (
-  <div className="relative overflow-hidden rounded-2xl aspect-square group">
-    <div 
-      className="absolute inset-0 bg-cover bg-center"
-      style={{ 
-        backgroundImage: `url(${backgroundImage})`,
-        backgroundColor: '#000',
-      }}
-    />
-    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-    <div className="absolute inset-0 flex items-center justify-center opacity-100 group-hover:opacity-0 transition-opacity duration-300 ease-in-out">
-      <h3 className="text-4xl font-bold text-white">{title}</h3>
-    </div>
-    
-    <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 ease-in-out p-6">
-      <h3 className="text-3xl font-bold text-white mb-4">{title}</h3>
-      <p className="text-lg text-white mb-4 text-center">{description}</p>
-      <button className="bg-cyan-400 text-white py-2 px-6 rounded-full hover:bg-cyan-500 transition-colors">Learn More</button>
-    </div>
-  </div>
-);
-
 export default function LandingPage() {
   const whatsappPhoneNumber = '9096451662';
   const defaultMessage = encodeURIComponent('Hello, I would like to inquire about Copado services!');
-
-  const stages = [
-    { icon: "⟨", label: "Plan" },
-    { icon: "🔧", label: "Build" },
-    { icon: "✓", label: "Test" },
-    { icon: "🚀", label: "Release" },
-    { icon: "▶", label: "Operate" }
-  ];
 
   return (
     <div className="min-h-screen bg-[#0D0F1D] text-white font-sans">
@@ -189,18 +161,8 @@ export default function LandingPage() {
           </div>
         </div>
 
-        <div className="bg-[#1A1C2E] rounded-2xl p-12">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-            {stages.map((stage, index) => (
-              <StageIcon
-                key={stage.label}
-                icon={stage.icon}
-                label={stage.label}
-                isLast={index === stages.length - 1}
-              />
-            ))}
-          </div>
-        </div>
+        <Workflow />
+
       </div>
 
       <div className="container mx-auto px-8 py-16 bg-gradient-to-b from-transparent to-[#1A1C2E]">
@@ -225,26 +187,7 @@ export default function LandingPage() {
         </div>
       </div>
 
-      <div className="container mx-auto px-8 py-16">
-        <h2 className="text-4xl sm:text-5xl font-bold text-center mb-16">Explore DevOps by Product</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          <ProductCard 
-            title="CI-CD"
-            backgroundImage="/assets/image.jpg"
-            description="Continuous Integration and Continuous Deployment for faster delivery."
-          />
-          <ProductCard 
-            title="Robotic Testing"
-            backgroundImage="/assets/image.jpg"
-            description="Automated testing using robotic frameworks to ensure high quality."
-          />
-          <ProductCard 
-            title="AI Agents"
-            backgroundImage="/assets/image.jpg"
-            description="AI-powered agents for intelligent decision-making and automation."
-          />
-        </div>
-      </div>
+      <ProductCard />
 
       <div className="relative w-full min-h-[600px] flex items-center justify-center bg-gradient-to-br from-[#0D0F1D] via-[#1a2942] to-[#0D0F1D] overflow-hidden">
         <div className="absolute inset-0">
@@ -264,12 +207,15 @@ export default function LandingPage() {
           </p>
           
           <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-3 rounded-md hover:opacity-90 transition-opacity border border-transparent">
-              Watch a Demo
-            </button>
-            <button className="bg-transparent text-white px-8 py-3 rounded-md hover:bg-white/10 transition-colors border border-white">
-              Book a Demo
-            </button>
+            <Link to="/consult-us" className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-3 rounded-md hover:opacity-90 transition-opacity border border-transparent">
+              Book Consultation
+            </Link>
+            <a
+              href={`https://wa.me/${whatsappPhoneNumber}?text=${defaultMessage}`}
+              target="_blank"
+              rel="noopener noreferrer" className="bg-transparent text-white px-8 py-3 rounded-md hover:bg-white/10 transition-colors border border-white">
+              Contact with us
+            </a>
           </div>
         </div>
       </div>
