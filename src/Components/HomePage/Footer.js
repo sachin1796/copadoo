@@ -48,9 +48,9 @@ const Footer = () => {
               United States
             </address>
             <div className="flex space-x-4">
-              <img src="/iso-27001.png" alt="ISO 27001" className="h-16" />
-              <img src="/soc-2.png" alt="SOC 2" className="h-16" />
-              <img src="/fedramp.png" alt="FedRAMP" className="h-16" />
+              {/* <img src="/iso-27001.png" alt="ISO 27001" className="h-16" /> */}
+              {/* <img src="/soc-2.png" alt="SOC 2" className="h-16" /> */}
+              {/* <img src="/fedramp.png" alt="FedRAMP" className="h-16" /> */}
             </div>
           </div>
 

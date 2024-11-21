@@ -30,22 +30,22 @@ const ProductSection = () => {
       <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-16">Explore DevOps by Product</h2>
       <div className="flex flex-wrap justify-center gap-8 lg:justify-start lg:flex-nowrap">
         <ProductCard 
-          title="CI-CD"
+          title="ITBC"
           backgroundImage={image}  
           description="Continuous Integration and Continuous Deployment for faster delivery."
         />
         <ProductCard 
-          title="Robotic Testing"
+          title="Compliances"
           backgroundImage={image}  
           description="Automated testing using robotic frameworks to ensure high quality."
         />
         <ProductCard 
-          title="AI Agents"
+          title="Cybersecurity"
           backgroundImage={image}  
           description="AI-powered agents for intelligent decision-making and automation."
         />
         <ProductCard 
-          title="AI Agents"
+          title="DevOps/MLOps"
           backgroundImage={image} 
           description="AI-powered agents for intelligent decision-making and automation."
         />

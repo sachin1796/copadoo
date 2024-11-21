@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Infinity } from 'lucide-react';
 import {
   Search,
   ChevronRight,
@@ -73,7 +74,7 @@ const NavBar = () => {
 
   const productItems = [
     {
-      title: "Copado DevOps",
+      title: "ITGC",
       items: [
         {
           icon: <Settings className="w-4 h-4" />,
@@ -81,34 +82,34 @@ const NavBar = () => {
           description: "Power & Protect Development with DevOps.",
           href: "/devops-overview",
         },
-        {
-          icon: <Code className="w-4 h-4" />,
-          title: "CI/CD",
-          description: "Unlock Continuous Innovation with CI/CD Pipelines.",
-          href: "/ci-cd",
-        },
-        {
-          icon: <Activity className="w-4 h-4" />,
-          title: "Agile Planning",
-          description: "Drive maximum value with agile planning.",
-          href: "/agile-planning",
-        },
-        {
-          icon: <TestTube className="w-4 h-4" />,
-          title: "Quality Assurance",
-          description: "Transform QA with automated testing and quality gates.",
-          href: "/quality-assurance",
-        },
-        {
-          icon: <Code className="w-4 h-4" />,
-          title: "Extensibility",
-          description: "Extend the Copado Platform by executing Functions.",
-          href: "/extensibility",
-        },
+        // {
+        //   icon: <Code className="w-4 h-4" />,
+        //   title: "CI/CD",
+        //   description: "Unlock Continuous Innovation with CI/CD Pipelines.",
+        //   href: "/ci-cd",
+        // },
+        // {
+        //   icon: <Activity className="w-4 h-4" />,
+        //   title: "Agile Planning",
+        //   description: "Drive maximum value with agile planning.",
+        //   href: "/agile-planning",
+        // },
+        // {
+        //   icon: <TestTube className="w-4 h-4" />,
+        //   title: "Quality Assurance",
+        //   description: "Transform QA with automated testing and quality gates.",
+        //   href: "/quality-assurance",
+        // },
+        // {
+        //   icon: <Code className="w-4 h-4" />,
+        //   title: "Extensibility",
+        //   description: "Extend the Copado Platform by executing Functions.",
+        //   href: "/extensibility",
+        // },
       ],
     },
     {
-      title: "Copado Robotic Testing",
+      title: "DevOps/MLOps",
       items: [
         {
           icon: <Rocket className="w-4 h-4" />,
@@ -116,34 +117,34 @@ const NavBar = () => {
           description: "Automated testing for your applications.",
           href: "/robotic-testing",
         },
-        {
-          icon: <Code className="w-4 h-4" />,
-          title: "Salesforce Testing",
-          description: "Specialized testing for Salesforce applications.",
-          href: "/salesforce-testing",
-        },
-        {
-          icon: <Settings className="w-4 h-4" />,
-          title: "Mobile Testing",
-          description: "Comprehensive testing for mobile applications.",
-          href: "/mobile-testing",
-        },
-        {
-          icon: <Activity className="w-4 h-4" />,
-          title: "Copado Explorer",
-          description: "Explore and analyze your testing results.",
-          href: "/copado-explorer",
-        },
-        {
-          icon: <TestTube className="w-4 h-4" />,
-          title: "TestAgent",
-          description: "Automated test execution agent.",
-          href: "/test-agent",
-        },
+        // {
+        //   icon: <Code className="w-4 h-4" />,
+        //   title: "Salesforce Testing",
+        //   description: "Specialized testing for Salesforce applications.",
+        //   href: "/salesforce-testing",
+        // },
+        // {
+        //   icon: <Settings className="w-4 h-4" />,
+        //   title: "Mobile Testing",
+        //   description: "Comprehensive testing for mobile applications.",
+        //   href: "/mobile-testing",
+        // },
+        // {
+        //   icon: <Activity className="w-4 h-4" />,
+        //   title: "Copado Explorer",
+        //   description: "Explore and analyze your testing results.",
+        //   href: "/copado-explorer",
+        // },
+        // {
+        //   icon: <TestTube className="w-4 h-4" />,
+        //   title: "TestAgent",
+        //   description: "Automated test execution agent.",
+        //   href: "/test-agent",
+        // },
       ],
     },
     {
-      title: "Copado AI",
+      title: "Compliances",
       items: [
         {
           icon: <Rocket className="w-4 h-4" />,
@@ -155,7 +156,7 @@ const NavBar = () => {
       ],
     },
     {
-      title: "Copado Essentials",
+      title: "Cybersecurity",
       items: [
         {
           icon: <Settings className="w-4 h-4" />,
@@ -323,11 +324,16 @@ const NavBar = () => {
         <div className="flex items-center">
           {/* Copado Logo */}
           <div className="flex items-center">
-            <div className="w-8 h-8 bg-cyan-400 rounded-full"></div>
+            {/* <div className="w-8 h-8 bg-cyan-400 rounded-full"></div> */}
             <span className="ml-2 text-xl font-bold">
-              <Link to="/" className="hover:text-cyan-400">
+              {/* <Link to="/" className="hover:text-cyan-400">
                 COPADO
-              </Link>
+              </Link> */}
+              {/* <Infinity className="w-8 h-8 text-[#00B6F0]" /> */}
+              <Link to='/' className="flex items-center space-x-2">
+              <Infinity className="w-8 h-8 text-[#00B6F0]" />
+              <span className="text-2xl font-bold">COPADO</span>
+            </Link>
             </span>
           </div>
         </div>

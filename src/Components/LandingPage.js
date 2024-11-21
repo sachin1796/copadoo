@@ -3,6 +3,8 @@ import { ChevronRight } from 'lucide-react';
 import { Link } from "react-router-dom";
 import NavBar from './HomePage/NavBar';
 import image from '../../src/i.jpg';
+import devops from '../../src/assets/devops.png';
+import salesforce from '../../src/assets/salesforce.jpg';
 import Workflow from './HomePage/Workflow';
 import ProductCard from './HomePage/ProductSection';
 
@@ -24,10 +26,10 @@ export default function LandingPage() {
       <div className="container mx-auto px-8 py-16 grid lg:grid-cols-2 gap-12 items-center">
         <div className="space-y-8">
           <h1 className="text-4xl sm:text-5xl font-bold leading-tight">
-            AI-Powered, People-Focused
+          Revolutionizing Development with Copado
           </h1>
           <p className="text-gray-300 text-lg leading-relaxed">
-            Copado's DevOps platform accelerates development cycles and boosts collaboration, empowering teams to build and deploy high-quality business applications faster, with less risk.
+          Copado's DevOps and MLOps platform accelerates software development, enhances collaboration, and ensures faster, high-quality business application deployment with reduced risk.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link to='/consult-us' className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-md hover:opacity-90 transition-opacity">
@@ -99,7 +101,7 @@ export default function LandingPage() {
           <div className="bg-[#1A1C2E] rounded-lg overflow-hidden hover:bg-[#2D3142] transition-colors">
             <div className="p-6">
               <div className="h-48 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg mb-4 flex items-center justify-center">
-                <img src="/api/placeholder/400/320" alt="DevOps AI Agents" className="h-40 object-contain" />
+                <img src={devops} alt="DevOps AI Agents" className="h-40 object-contain" />
               </div>
               <h3 className="text-xl font-bold mb-2">Introducing AI Agents for Every DevOps Stage</h3>
               <p className="text-gray-300 mb-4">Check out Copado's new DevOps AI agents - Empower your teams to innovate faster than ever!</p>
@@ -112,7 +114,7 @@ export default function LandingPage() {
           <div className="bg-[#1A1C2E] rounded-lg overflow-hidden hover:bg-[#2D3142] transition-colors">
             <div className="p-6">
               <div className="h-48 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-lg mb-4 flex items-center justify-center">
-                <img src="/api/placeholder/400/320" alt="Salesforce Guide" className="h-40 object-contain" />
+                <img src={salesforce} alt="Salesforce Guide" className="h-40 object-contain" />
               </div>
               <h3 className="text-xl font-bold mb-2">How to Simplify Salesforce as You Scale: A Developer's Guide</h3>
               <p className="text-gray-300 mb-4">Discover how to leverage user stories, manage conflicts and organize environments for maximum efficiency in Copado's comprehensive guide.</p>
