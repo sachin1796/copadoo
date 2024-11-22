@@ -4,14 +4,12 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
-    { name: 'Platform', href: '#' },
-    { name: 'Pricing', href: '#' },
-    { name: 'Support', href: '#' },
-    { name: 'Customer Stories', href: '#' },
-    { name: 'DevOps Hub', href: '#' },
-    { name: 'Events', href: '#' },
-    { name: 'Demo', href: '#' },
-    { name: 'Services', href: '#' },
+    { name: 'Home', href: '/' },
+    { name: 'Products', href: '/' },
+    { name: 'Solutions', href: '/solution' },
+    { name: 'About', href: 'about-us' },
+    { name: 'Resources', href: '/' },
+    { name: 'Contact', href: 'consult-us' },
   ];
 
   const companyLinks = [
@@ -47,11 +45,6 @@ const Footer = () => {
               Chicago IL 60611<br />
               United States
             </address>
-            <div className="flex space-x-4">
-              {/* <img src="/iso-27001.png" alt="ISO 27001" className="h-16" /> */}
-              {/* <img src="/soc-2.png" alt="SOC 2" className="h-16" /> */}
-              {/* <img src="/fedramp.png" alt="FedRAMP" className="h-16" /> */}
-            </div>
           </div>
 
           {/* Quick Links Section */}

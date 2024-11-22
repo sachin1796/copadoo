@@ -7,6 +7,7 @@ import devops from '../../src/assets/devops.png';
 import salesforce from '../../src/assets/salesforce.jpg';
 import Workflow from './HomePage/Workflow';
 import ProductCard from './HomePage/ProductSection';
+import cycle from '../assets/cycle.gif';
 
 const MetricCard = ({ value, label, isDark = false }) => (
   <div className={`rounded-xl h-72 flex flex-col justify-center items-center p-6 ${isDark ? 'bg-black' : 'bg-white'}`}>
@@ -46,53 +47,8 @@ export default function LandingPage() {
           </div>
         </div>
 
-        <div className="relative">
-          <div className="bg-[#1A1C2E] rounded-2xl p-8">
-            <div className="relative aspect-square">
-              <div className="absolute inset-0">
-                <svg viewBox="0 0 200 100" className="w-full">
-                  <path
-                    d="M50,50 A25,25 0 1,1 100,50 A25,25 0 1,1 150,50 A25,25 0 1,1 100,50 A25,25 0 1,1 50,50"
-                    fill="none"
-                    stroke="url(#gradient)"
-                    strokeWidth="2"
-                    className="path-animation"
-                  />
-                  <defs>
-                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" stopColor="#00B4E6" />
-                      <stop offset="50%" stopColor="#7B5AE3" />
-                      <stop offset="100%" stopColor="#00B4E6" />
-                    </linearGradient>
-                  </defs>
-                </svg>
-                
-                <div className="absolute top-1/4 left-1/4 transform -translate-x-1/2 -translate-y-1/2">
-                  <div className="w-12 h-12 rounded-full bg-purple-500 flex items-center justify-center">
-                    <span className="text-xs">PLAN</span>
-                  </div>
-                </div>
-                <div className="absolute top-1/4 right-1/4 transform translate-x-1/2 -translate-y-1/2">
-                  <div className="w-12 h-12 rounded-full bg-cyan-500 flex items-center justify-center">
-                    <span className="text-xs">BUILD</span>
-                  </div>
-                </div>
-                <div className="absolute bottom-1/4 right-1/4 transform -translate-x-1/2 -translate-y-1/2">
-                  <div className="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center">
-                    <span className="text-xs">TEST</span>
-                  </div>
-                </div>
-                <div className="absolute bottom-1/4 left-1/4 transform translate-x-1/2 -translate-y-1/2">
-                  <div className="w-12 h-12 rounded-full bg-indigo-500 flex items-center justify-center">
-                    <span className="text-xs">DEPLOY</span>
-                  </div>
-                </div>
-              </div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="text-xl font-bold text-center">FROM PLAN TO OPERATE</span>
-              </div>
-            </div>
-          </div>
+        <div className='bg-white'>
+          <img src={cycle} alt="" />
         </div>
       </div>
 
@@ -202,21 +158,6 @@ export default function LandingPage() {
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes gradient {
-          0% {
-            stroke-dashoffset: 0;
-          }
-          100% {
-            stroke-dashoffset: -100;
-          }
-        }
-        .path-animation {
-          stroke-dasharray: 50;
-          animation: gradient 3s linear infinite;
-        }
-      `}</style>
     </div>
   );
 }

@@ -18,10 +18,10 @@ const founders = [
 
 const FoundersSection = () => (
   <section className="bg-white py-12">
-    <h2 className="text-3xl font-bold text-center mb-8">Meet the Founders</h2>
-    <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8">
+    <h2 className="text-4xl font-bold text-center mb-8">Meet the Founders</h2>
+    <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8 px-10">
       {founders.map((founder, index) => (
-        <div key={index} className="bg-gray-100 p-6 rounded-lg shadow-lg text-center">
+        <div key={index} className="bg-gray-100 p-6 rounded-lg shadow-lg text-center transform transition-all duration-300 hover:scale-105">
           <img className="w-32 h-32 rounded-full mx-auto mb-4" src={founder.image} alt={founder.name} />
           <h3 className="text-xl font-bold">{founder.name}</h3>
           <p className="text-sm text-gray-600">{founder.title}</p>
