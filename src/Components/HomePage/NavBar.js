@@ -357,10 +357,10 @@ const NavBar = () => {
                   onClick={() => setActiveDropdown(activeDropdown === "solutions" ? null : "solutions")}
                 >
                   <Link to="/solution">Solutions</Link>
-                  <ChevronRight className="w-4 h-4 ml-1 rotate-90" />
+                  {/* <ChevronRight className="w-4 h-4 ml-1 rotate-90" /> */}
                 </button>
                 {/* Dropdown content remains the same */}
-                {activeDropdown === "solutions" && (
+                {/* {activeDropdown === "solutions" && (
                   <div className="absolute left-0 top-full pt-2 z-50" onMouseLeave={() => setActiveDropdown(null)}>
                     <div className="w-64 bg-white rounded-lg shadow-lg">
                       {menuItems.map((menu) => (
@@ -386,7 +386,7 @@ const NavBar = () => {
                       ))}
                     </div>
                   </div>
-                )}
+                )} */}
               </div>
 
               {/* About Dropdown */}
@@ -397,10 +397,10 @@ const NavBar = () => {
                   onClick={() => setActiveDropdown(activeDropdown === "about" ? null : "about")}
                 >
                   <Link to="/about-us">About</Link>
-                  <ChevronRight className="w-4 h-4 ml-1 rotate-90" />
+                  {/* <ChevronRight className="w-4 h-4 ml-1 rotate-90" /> */}
                 </button>
                 {/* Dropdown content remains the same */}
-                {activeDropdown === "about" && (
+                {/* {activeDropdown === "about" && (
                   <div className="absolute -left-20 top-full pt-2 z-50 w-[800px]" onMouseLeave={() => setActiveDropdown(null)}>
                     <div className="bg-white rounded-lg shadow-lg p-4">
                       <div className="grid grid-cols-2 gap-4">
@@ -429,7 +429,7 @@ const NavBar = () => {
                       </div>
                     </div>
                   </div>
-                )}
+                )} */}
               </div>
 
               {/* Resources Dropdown */}
